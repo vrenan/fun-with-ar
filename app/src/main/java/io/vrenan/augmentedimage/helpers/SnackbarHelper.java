@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.ar.sceneform.samples.common.helpers;
+package io.vrenan.augmentedimage.helpers;
 
 import android.app.Activity;
 import com.google.android.material.snackbar.BaseTransientBottomBar;

@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.ar.sceneform.samples.augmentedimage
+package io.vrenan.augmentedimage
 
 import android.app.ActivityManager
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -31,10 +30,9 @@ import com.google.ar.core.AugmentedImageDatabase
 import com.google.ar.core.Config
 import com.google.ar.core.Session
 
-import com.google.ar.sceneform.samples.common.helpers.SnackbarHelper
+import io.vrenan.augmentedimage.helpers.SnackbarHelper
 import com.google.ar.sceneform.ux.ArFragment
 import java.io.IOException
-import java.io.InputStream
 
 /**
  * Extend the ArFragment to customize the ARCore session configuration to include Augmented Images.

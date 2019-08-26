@@ -10,7 +10,7 @@
     style="?attr/bottomSheetStyle"
     android:background="@color/design_default_color_primary_dark"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-    <include layout="@layout/wink_animation_view"/>
+    <include layout="@layout/wink_animation_view_layout"/>
 </FrameLayout>
     
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
