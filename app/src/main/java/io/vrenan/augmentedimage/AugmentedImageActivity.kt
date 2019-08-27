@@ -33,6 +33,7 @@ class AugmentedImageActivity : AppCompatActivity() {
 
     private var arFragment: ArFragment? = null
     private var fitToScanView: ImageView? = null
+    private var arNode: AugmentedImageNode? = null
 
     private val augmentedImageMap = HashMap<AugmentedImage, AugmentedImageNode>()
 
@@ -54,6 +55,12 @@ class AugmentedImageActivity : AppCompatActivity() {
         }
     }
 
+
+    override fun onDestroy() {
+        super.onDestroy()
+        arFragment?.arSceneView?.scene?.onRemoveChild(arNode)
+    }
+
     private fun onUpdateFrame(frameTime: FrameTime) {
         val frame = arFragment!!.arSceneView.arFrame ?: return
 
@@ -72,6 +79,7 @@ class AugmentedImageActivity : AppCompatActivity() {
                     // Create a new anchor for newly found images.
                     if (!augmentedImageMap.containsKey(augmentedImage)) {
                         val node = AugmentedImageNode(this)
+                        arNode = node
                         node.image = augmentedImage
                         toolbar.button.setOnClickListener {
                             node.animationView?.setState(WinkAnimationView.State.ENABLED)

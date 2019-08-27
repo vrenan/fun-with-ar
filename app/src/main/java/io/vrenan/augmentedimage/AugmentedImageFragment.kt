@@ -102,6 +102,11 @@ class AugmentedImageFragment : ArFragment() {
         return null
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        AugmentedImageNode.viewRenderableFuture = null
+    }
+
     companion object {
         private val TAG = "AugmentedImageFragment"
 

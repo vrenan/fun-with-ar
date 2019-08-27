@@ -78,8 +78,8 @@ class AugmentedImageNode(context: Context) : AnchorNode() {
 
     companion object {
 
-        private val TAG = "AugmentedImageNode"
+        val TAG = "AugmentedImageNode"
 
-        private var viewRenderableFuture: CompletableFuture<ViewRenderable>? = null
+        var viewRenderableFuture: CompletableFuture<ViewRenderable>? = null
     }
 }

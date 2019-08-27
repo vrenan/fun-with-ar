@@ -26,6 +26,8 @@ class WinkAnimationView : LinearLayout {
             : super(context, attrs, defStyleAttr) {
         LayoutInflater.from(context)
                 .inflate(R.layout.wink_animation_view_layout, this, true)
+        setBackgroundResource(R.drawable.rounded_bg)
+        setPadding(16,16,16,16)
         setState(State.DISABLED)
     }
 
@@ -41,7 +43,7 @@ class WinkAnimationView : LinearLayout {
         setState(State.DISABLED)
     }
 
-    public fun setState(state: State) {
+    public fun setState(state: State ) {
         when(state) {
             State.ENABLED -> {
                 animationView.playAnimation()

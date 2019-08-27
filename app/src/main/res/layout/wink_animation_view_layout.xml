@@ -14,6 +14,7 @@
         android:id="@+id/animationView"
         android:layout_width="125dp"
         android:layout_height="125dp"
+        android:layout_marginRight="16dp"
         app:lottie_autoPlay="false"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/wink" />
@@ -25,6 +26,6 @@
         android:fontFamily="sans-serif-black"
         android:text="POSTE SUA IDEIA AQUI"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#2EBBE1" />
+        android:textColor="#ff5630" />
 
 </merge>
